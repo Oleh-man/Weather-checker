@@ -1,0 +1,48 @@
+.weather-container {
+    height: 200px;
+    width: 100%;
+    @include flex-row;
+
+    &>div {
+        text-align: center;
+        width: 30%;
+    }
+
+    &__main-temp {
+
+        &--big {
+            color: $city-color;
+            font-size: 8vh;
+        }
+        &--small {
+            font-size: 2vh
+        }
+
+    }
+
+    &__info {
+        @include flex-row;
+        &__icons {
+            width: 50%;
+            margin-left: auto;
+        }
+        
+        &__dem {
+            width: 50%;
+            text-align: left;
+            font-size: 2.5vh;
+            line-height: 25px;
+        }
+    }
+}
+
+.info-icon {
+    margin-right: 10px;
+    margin-left: auto;
+    width: 25px;
+    height: 25px;
+    img {
+        opacity: 0.4;
+        width: 100%;
+    }
+}

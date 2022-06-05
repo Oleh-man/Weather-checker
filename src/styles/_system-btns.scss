@@ -1,0 +1,25 @@
+.change-system {
+    margin-top: 40px;
+    border: 1px solid $primary-color;
+    text-align: center;    
+}
+
+.system-btn {
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    width: 50px;
+    border: none;
+    background-color: white;
+    font-family: 'Nunito', sans-serif;
+    color: $city-color;
+    font-size: 3vh;
+}
+
+.system-active {
+    background-color: rgb(235,110,75);
+}
+
+.system-disabled {
+    background-color: white;
+}

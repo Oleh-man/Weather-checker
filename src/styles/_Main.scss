@@ -1,0 +1,65 @@
+h1 {
+
+    text-align: center;
+    font-size: 5vh;
+    margin: 40px 0;
+
+    a {
+        color: rgb(235,110,75);
+        text-decoration: none;
+    }
+}
+
+.input-container {
+    text-align: center;
+    font-size: 3vh;
+    margin-bottom: 40px;
+
+    &__question {
+        margin-bottom: 20px;
+    }
+
+    &__check--btn {
+        cursor: pointer;
+        // border: 1px solid rgb(226, 226, 226);
+        border: none;
+        outline: none;
+        color: $city-color;
+        background-color: white;
+        border-radius: 5px;
+        font-size: 3vh;
+        height: 45px;
+        margin-left: 1ch;
+        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(70, 70, 70, 0.22);
+
+        &:active {
+            box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(70, 70, 70, 0.12);
+        }
+    }
+}
+
+
+.city-name {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.214);
+    outline: none;
+    font-size: 3vh;
+    color: $city-color;
+    width: 9.5ch;
+
+    &:focus {
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.214);
+    }
+}
+
+.wait-city {
+    font-size: 2vh;
+}
+
+.red-text {
+    color: red;
+}
+
