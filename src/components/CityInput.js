@@ -11,7 +11,7 @@ const CityInput = (props) => {
             <div className='input-container__check'>
                 <span className='input-container__check--span'>Just</span>
                 <button
-                    className='input-container__check--btn'
+                    className='btn input-container__check--btn'
                     onClick={props.checkWeather}>Check it
                 </button>
             </div>

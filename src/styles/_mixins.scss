@@ -4,3 +4,20 @@
     align-content: center;
     align-items: center;
 }
+
+@mixin tablet {
+    @media (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin small-tablet {
+    @media (max-width: $small-tablet-width) {
+        @content;
+    }
+}
+@mixin phone {
+    @media (max-width: $phone-width) {
+        @content;
+    }
+}

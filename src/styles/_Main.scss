@@ -5,8 +5,26 @@ h1 {
     margin: 40px 0;
 
     a {
-        color: rgb(235,110,75);
+        color: rgb(235, 110, 75);
         text-decoration: none;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    // border: 1px solid rgb(226, 226, 226);
+    border: none;
+    outline: none;
+    color: $city-color;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 3vh;
+    height: 45px;
+    // margin-left: 1ch;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(70, 70, 70, 0.22);
+
+    &:active {
+        box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(70, 70, 70, 0.12);
     }
 }
 
@@ -20,21 +38,7 @@ h1 {
     }
 
     &__check--btn {
-        cursor: pointer;
-        // border: 1px solid rgb(226, 226, 226);
-        border: none;
-        outline: none;
-        color: $city-color;
-        background-color: white;
-        border-radius: 5px;
-        font-size: 3vh;
-        height: 45px;
         margin-left: 1ch;
-        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(70, 70, 70, 0.22);
-
-        &:active {
-            box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(70, 70, 70, 0.12);
-        }
     }
 }
 
@@ -62,4 +66,3 @@ h1 {
 .red-text {
     color: red;
 }
-

@@ -1,7 +1,9 @@
 .change-system {
-    margin-top: 40px;
-    border: 1px solid $primary-color;
+    margin-bottom: 40px;
+    // border: 1px solid rgba(0, 0, 0, 0.067);
+    border-radius: 10px;
     text-align: center;    
+    outline: none;
 }
 
 .system-btn {
@@ -10,6 +12,7 @@
     height: 40px;
     width: 50px;
     border: none;
+    border-radius: 10px;
     background-color: white;
     font-family: 'Nunito', sans-serif;
     color: $city-color;
@@ -17,7 +20,7 @@
 }
 
 .system-active {
-    background-color: rgb(235,110,75);
+    background-color: rgba(235, 110, 75, 0.621);
 }
 
 .system-disabled {

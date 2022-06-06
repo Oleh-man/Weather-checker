@@ -1,0 +1,37 @@
+.details {
+    @include flex-row;
+   justify-content: space-evenly;
+
+    margin-top: 20px;
+    width: 100%;
+}
+
+.details__param {
+    text-align: center;
+    width: 50%;
+    
+    &--title {
+        font-size: 2vh;
+        color: $city-color;
+    }
+    .details__param-itm {
+        display: flex;
+        justify-content: center;
+        
+        div {
+            width: 30%;
+        }
+
+        .separator {
+            width: 20px;
+        }
+        :first-child {
+            text-align: end;
+        }
+
+        :last-child {
+            text-align: start;
+        }
+    }
+}
+

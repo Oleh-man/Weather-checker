@@ -1,19 +1,20 @@
 import React from 'react'
 import CityInput from '../components/CityInput';
 import CurrentWeather from '../components/CurrentWeather'
-import SwitchSystem from '../components/SwitchSystem'
 
 class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            city: '',
+            city: `${sessionStorage.getItem('city')}`,
             weatherData: null,
-            metric: true
+            metric: true,
+            details: false
         };
     };
 
     changeInputSize = (e) => {
+        sessionStorage.setItem('city', e.target.value)
         this.setState((oldState) => {
             return {
                 ...oldState,
@@ -79,15 +80,25 @@ class Main extends React.Component {
         let changedDis = dis * 3.6;
         if (this.state.metric === true) {
             return `${(changedDis).toFixed(2)}km/h`;
-        }else {
+        } else {
 
             return `${(changedDis * 0.62).toFixed(2)}mi/h`;
         };
     };
 
+    showDetails = (e) => {
+        console.log(e);
+        this.setState((oldState) => {
+            return {
+                ...oldState,
+                details: !oldState.details
+            };
+        });
+    };
+
     render() {
 
-        // console.log(this.state.city)
+        console.log(this.state.weatherData)
 
         return (
             <main className="wrapper">
@@ -98,10 +109,13 @@ class Main extends React.Component {
                 {this.state.weatherData && <CurrentWeather
                     data={this.state.weatherData}
                     ifMetric={this.state.metric}
+                    detailsVisibility={this.state.details} 
+                    changeTempSystem={this.changeTempSystem} 
+                    showDetails={this.showDetails}
                     toggleSystemDistance={this.toggleSystemDistance}
                     toggleSystem={this.toggleSystem} />}
                 {this.state.weatherData === undefined && <div className='wait-city red-text'>Please enter city name correctly</div>}
-                <SwitchSystem changeTempSystem={this.changeTempSystem} />
+                {/* {this.state.weatherData && <SwitchSystem changeTempSystem={this.changeTempSystem} />} */}
             </main>
         );
     };
