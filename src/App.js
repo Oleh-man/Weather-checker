@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/Weather-checker' element={<Main />} />
           <Route path='comparison' element={<Comparison />} />
         </Routes>
       </BrowserRouter>

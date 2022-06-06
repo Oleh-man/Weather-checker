@@ -4,7 +4,7 @@ const Header = (props) => {
     return (
         <header>
             <h1>
-                <Link to='/'>Weather Checker</Link>
+                <Link to='/Weather-checker'>Weather Checker</Link>
             </h1>
         </header>
     );
