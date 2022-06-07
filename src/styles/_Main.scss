@@ -15,8 +15,9 @@ h1 {
     // border: 1px solid rgb(226, 226, 226);
     border: none;
     outline: none;
-    color: $city-color;
-    background-color: white;
+    color: $primary-color;
+    background-color: rgba(235, 110, 75, 0.621);
+    // background-color: white;
     border-radius: 5px;
     font-size: 3vh;
     height: 45px;
@@ -37,9 +38,9 @@ h1 {
         margin-bottom: 20px;
     }
 
-    &__check--btn {
-        margin-left: 1ch;
-    }
+    // &__check--btn {
+    //     margin-left: 1ch;
+    // }
 }
 
 
@@ -51,6 +52,8 @@ h1 {
     font-size: 3vh;
     color: $city-color;
     width: 9.5ch;
+    background-color: bisque;
+
 
     &:focus {
         text-align: center;

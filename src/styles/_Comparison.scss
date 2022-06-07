@@ -1,3 +1,8 @@
 .comparison {
-    @include flex-row;
+    // @include flex-row;
+    font-size: 3vh;
+
+    button {
+        margin-top: 20px;
+    }
 }

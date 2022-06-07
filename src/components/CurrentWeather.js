@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SwitchSystem from "./SwitchSystem";
 import Details from "./Details";
 
 const CurrentWeather = (props) => {
-    const[detailsBtnText, setText] = useState('Details');
+    const [detailsBtnText, setText] = useState('Details');
     const changeBtnText = () => {
         detailsBtnText === 'Details' ? setText('Hide') : setText('Details');
     }
@@ -17,7 +17,8 @@ const CurrentWeather = (props) => {
                 </div>
                 <div className="weather-container__main-temp">
                     <div className="weather-container__main-temp--big">{props.data && props.toggleSystem(props.data.main.temp)}</div>
-                    <div className="weather-container__main-temp--small">{props.data && props.toggleSystem(props.data.main.temp_min)}/{props.data && props.toggleSystem(props.data.main.temp_max)}</div>
+                    {/* <div className="weather-container__main-temp--small">{props.data && props.toggleSystem(props.data.main.temp_min)}/{props.data && props.toggleSystem(props.data.main.temp_max)}</div> */}
+                    <div className="weather-container__main-temp--small">{props.data && props.data.weather[0].description}</div>
                 </div>
                 <div className="weather-container__info">
                     <div className="weather-container__info--itm">
@@ -43,9 +44,13 @@ const CurrentWeather = (props) => {
             {<SwitchSystem changeTempSystem={props.changeTempSystem} />}
             <button
                 className="details-btn btn"
-                onClick={() => {props.showDetails(); changeBtnText();}}>
+                onClick={() => { props.showDetails(); changeBtnText(); }}>
                 {detailsBtnText}</button>
-            {props.detailsVisibility === true && <Details showDetails={props.showDetails} data={props.data} />}
+            {props.detailsVisibility === true && <Details
+                showDetails={props.showDetails} 
+                data={props.data} 
+                toggleSystem={props.toggleSystem} 
+                toggleSystemDistance={props.toggleSystemDistance}/>}
         </>
     );
 };

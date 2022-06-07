@@ -1,9 +1,10 @@
 .details {
     @include flex-row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: flex-start;
 
     margin-top: 20px;
-    width: 100%;
+    width: calc(100% + 100px);
 
     @include small-tablet {
         flex-direction: column;
@@ -24,9 +25,10 @@
         display: flex;
         justify-content: center;
         font-size: 2vh;
+        margin-bottom: 5px;
 
         div {
-            width: 30%;
+            width: 50%;
         }
 
         .separator {
