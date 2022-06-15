@@ -12,16 +12,13 @@ h1 {
 
 .btn {
     cursor: pointer;
-    // border: 1px solid rgb(226, 226, 226);
     border: none;
     outline: none;
     color: $primary-color;
     background-color: rgba(235, 110, 75, 0.621);
-    // background-color: white;
     border-radius: 5px;
     font-size: 3vh;
     height: 45px;
-    // margin-left: 1ch;
     box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(70, 70, 70, 0.22);
 
     &:active {
@@ -33,18 +30,17 @@ h1 {
     text-align: center;
     font-size: 3vh;
     margin-bottom: 40px;
+    width: 95vw;
 
     &__question {
         margin-bottom: 20px;
     }
-
-    // &__check--btn {
-    //     margin-left: 1ch;
-    // }
 }
 
 
 .city-name {
+    display: block;
+    margin: auto;
     text-align: center;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.214);
@@ -52,6 +48,7 @@ h1 {
     font-size: 3vh;
     color: $city-color;
     width: 9.5ch;
+    max-width: 95vw;
     background-color: bisque;
 
 

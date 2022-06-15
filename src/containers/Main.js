@@ -115,7 +115,6 @@ class Main extends React.Component {
                     toggleSystemDistance={this.toggleSystemDistance}
                     toggleSystem={this.toggleSystem} />}
                 {this.state.weatherData === undefined && <div className='wait-city red-text'>Please enter city name correctly</div>}
-                {/* {this.state.weatherData && <SwitchSystem changeTempSystem={this.changeTempSystem} />} */}
             </main>
         );
     };

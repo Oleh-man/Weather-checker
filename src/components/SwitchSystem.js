@@ -1,23 +1,17 @@
 import React, { useState } from "react";
 
 const SwitchSystem = (props) => {
-    const [celsBg, setCel] = useState('system-active');
-    const [farBg, setFar] = useState('system-disabled');
-
-    const changeBG = () => {
-        if (celsBg === 'system-active') {
-            setCel('system-disabled');
-            setFar('system-active');
-        } else {
-            setFar('system-disabled');
-            setCel('system-active');
-        };
-    };
+    const [active, setActive] = useState('cel');
+    
+    const handleSwitch = (sys) => {
+        props.changeTempSystem();
+        setActive(sys)
+    }
 
     return (
-        <div className="change-system" onClick={props.changeTempSystem}>
-            <button onClick={changeBG} className={"system-btn " + celsBg}>&deg;C</button>
-            <button onClick={changeBG} className={"system-btn " + farBg}>&deg;F</button>
+        <div className="change-system">
+            <button disabled={active === 'cel'} onClick={()=> handleSwitch('cel')} className={`system-btn ${active === "cel" ? 'system-active' : 'system-disabled'}`}>&deg;C</button>
+            <button disabled={active === 'far'} onClick={()=> handleSwitch('far')} className={`system-btn ${active === "far" ? 'system-active' : 'system-disabled'}`}>&deg;F</button>
         </div>
     );
 };

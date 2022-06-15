@@ -17,7 +17,6 @@ const CurrentWeather = (props) => {
                 </div>
                 <div className="weather-container__main-temp">
                     <div className="weather-container__main-temp--big">{props.data && props.toggleSystem(props.data.main.temp)}</div>
-                    {/* <div className="weather-container__main-temp--small">{props.data && props.toggleSystem(props.data.main.temp_min)}/{props.data && props.toggleSystem(props.data.main.temp_max)}</div> */}
                     <div className="weather-container__main-temp--small">{props.data && props.data.weather[0].description}</div>
                 </div>
                 <div className="weather-container__info">

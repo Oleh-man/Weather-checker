@@ -7,7 +7,7 @@ const CityInput = (props) => {
                     className='city-name'
                     type="text"
                     placeholder='(your place)'
-                    autoFocus /> ?</p>
+                    autoFocus /></p>
             <div className='input-container__check'>
                 <div className='input-container__check--span'>Just</div>
                 <button

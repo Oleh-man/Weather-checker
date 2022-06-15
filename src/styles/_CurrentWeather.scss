@@ -58,6 +58,8 @@
         }
 
         @include phone {
+            margin-top: 10px;
+
             display: block;
         }
     }
