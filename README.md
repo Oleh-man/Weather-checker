@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Weather Checker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check weather of any city in one click!
 
 ## Available Scripts
 
